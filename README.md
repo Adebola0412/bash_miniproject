@@ -1,10 +1,10 @@
 # Bash Mini-Project: Genomic Data Analysis
 
 ## Student Information
-**Name**: [TODO: Your full name]
-**Student ID**: [TODO: Your student ID]
+**Name**: [ADEBOLA DEBORAH EGUNJOBI]
+**Student ID**: [MB300-0003/2025]
 **Course**: PUB 3127 - Computing for Biologists
-**Date Started**: [TODO: Date you started the project]
+**Date Started**: [20/11/2025]
 **Date Completed**: [TODO: Date you completed the project]
 
 ---
