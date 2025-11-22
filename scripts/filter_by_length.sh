@@ -18,7 +18,7 @@ do
 # extract all lenghts -ge 5000
     if [ "$length" -ge "$min" ]; then
 
-# get ONLY headers whose length equals this number AND are the long ones
+# get ONLY headers whose length equals this to number
         grep "length_${length}_cov" Data/IP-004_S38_L001_scaffolds.fasta >> results/filtered_sequences.txt
     fi
 done
