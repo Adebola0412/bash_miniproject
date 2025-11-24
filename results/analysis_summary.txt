@@ -1,0 +1,7 @@
+Analysis Summary
+-------------------------
+Date: Mon Nov 24 15:34:16 WAT 2025
+
+Total sequences in FASTA file: 35079
+High-quality scaffolds: 1
+Total protein entries: 934
