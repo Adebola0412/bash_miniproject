@@ -5,7 +5,7 @@
 **Student ID**: [MB300-0003/2025]
 **Course**: PUB 3127 - Computing for Biologists
 **Date Started**: [20/11/2025]
-**Date Completed**: [TODO: Date you completed the project]
+**Date Completed**: [24/11/2025]
 
 ---
 
@@ -131,15 +131,15 @@ The `Data/` directory contains:
 [TODO: Fill this section in after completing your analyses. Answer these questions:]
 
 ### FASTA File Analysis
-- **Total number of sequences**: [TODO]
-- **Longest sequence**: [TODO: NODE_X with length and coverage]
-- **Number of sequences with length >= 5000**: [TODO]
-- **Number of high-quality scaffolds** (length >= 10000, coverage >= 5.0): [TODO]
+- **Total number of sequences**: [35079]
+- **Longest sequence**: [NODE_1 with length 21257 bases and coverage 6.323607]
+- **Number of sequences with length >= 5000**: [283]
+- **Number of high-quality scaffolds** (length >= 10000, coverage >= 5.0): [31]
 
 ### Protein Database Analysis
-- **Total protein entries**: [TODO]
-- **Number of unique genes**: [TODO]
-- **Example protein search result** (e.g., for "kinase"): [TODO: number of matches]
+- **Total protein entries**: [850]
+- **Number of unique genes**: [891]
+- **Example protein search result** (e.g., for "kinase"): [38]
 
 ### Key Findings
 [TODO: Write 2-3 sentences about interesting observations from your analysis]
@@ -165,18 +165,19 @@ The `Data/` directory contains:
 ## Challenges and Solutions
 
 [TODO: Document any challenges you faced and how you solved them. This shows your problem-solving process. Example:]
+# I have issue on how to use command line argument, I solve it using echo and read
 
-**Challenge 1**: [TODO: Describe a problem you encountered]
-**Solution**: [TODO: Describe how you solved it]
+**Challenge 1**: [I have issue on how to use command line argument]
+**Solution**: [I solved it by echo and read]
 
-**Challenge 2**: [TODO]
-**Solution**: [TODO]
+**Challenge 2**: [I have issue on how to run_analysis]
+**Solution**: [I solved my seeking internet]
 
 ---
 
 ## What I Learned
 
-[TODO: Write a brief reflection (3-5 sentences) about what you learned from this project. Consider:]
+[ I learned how to used command line argument and I have better understanding on how to use grep cut pipeline to analyse large data ]
 - New bash commands or concepts you learned
 - How command-line tools can be useful for bioinformatics
 - Any insights about version control with Git
@@ -199,6 +200,6 @@ This project is for educational purposes as part of PUB 3127 coursework.
 ---
 
 ## Acknowledgments
-- **Instructor**: [TODO: Your instructor's name]
-- **Institution**: [TODO: Your university/institution name]
+- **Instructor**: [Dr Caleb Kibet]
+- **Institution**: [Pan African University Institute for Basic Science, Technology and Innovation]
 - Data sources: [Sequencing data and UniProt database]
