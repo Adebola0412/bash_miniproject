@@ -30,4 +30,3 @@ done
 
 count=$(wc -l < results/high_quality_scaffolds.txt)
 echo "Found $count high-quality scaffolds"
-

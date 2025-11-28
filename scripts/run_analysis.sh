@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
 # 1. Check that at least one argument is given
-
 if [ $# -lt 1 ]; then
     echo "ERROR: No data directory provided."
     echo "Usage: $0 <data_directory>"
@@ -10,10 +9,11 @@ fi
 
 DATA_DIR="$1"
 
-# 2. Check that required data files exist
+
+# 2. Check required files
 
 FASTA="$DATA_DIR/IP-004_S38_L001_scaffolds.fasta"
-PROTEIN_DB="$DATA_DIR/humchrx.txt"   # REAL FILE
+PROTEIN_DB="$DATA_DIR/humchrx.txt"
 
 if [ ! -f "$FASTA" ]; then
     echo "ERROR: FASTA file not found: $FASTA"
@@ -26,51 +26,53 @@ if [ ! -f "$PROTEIN_DB" ]; then
 fi
 
 
-# 3. FASTA Exploration
+# 4. FASTA EXPLORATION
 
-echo "Running FASTA exploration"
+echo "FASTA EXPLORATION"
+
 grep -c "^>" "$FASTA" > results/sequence_count.txt
-echo "[DONE] FASTA exploration complete"
-
 TOTAL_SEQ=$(cat results/sequence_count.txt)
 
+echo "Total sequences: $TOTAL_SEQ"
+echo "[DONE] FASTA exploration complete"
 
 # 4. Sequence Filtering
 
 echo "Filtering high-quality scaffolds"
-scripts/filter_by_length.sh > results/high_quality_scaffolds.txt
+scripts/filter_by_length.sh
 echo "[DONE] High-quality scaffolds generated"
 
 HQ_COUNT=$(wc -l < results/high_quality_scaffolds.txt)
 
 
-# 5. Protein Database Analysis
+# 5. Protein database analysis
 
-echo "Running protein analysis"
+echo "PROTEIN ANALYSIS"
+
 grep -c "^" "$PROTEIN_DB" > results/protein_count.txt
-echo "[DONE] Protein analysis complete"
-
 PROTEIN_TOTAL=$(cat results/protein_count.txt)
 
+echo "Total proteins: $PROTEIN_TOTAL"
+echo "[DONE] Protein analysis complete"
 
-# 6. Create Final Summary
+
+# 6. Final Summary
+
+echo "WRITING SUMMARY"
 
 SUMMARY_FILE="results/analysis_summary.txt"
 DATE_NOW=$(date)
 
-echo "Writing final summary..."
-
 echo "Analysis Summary" > "$SUMMARY_FILE"
-echo "-------------------------" >> "$SUMMARY_FILE"
-echo "Date: $DATE_NOW" >> "$SUMMARY_FILE"
 echo "" >> "$SUMMARY_FILE"
 echo "Total sequences in FASTA file: $TOTAL_SEQ" >> "$SUMMARY_FILE"
 echo "High-quality scaffolds: $HQ_COUNT" >> "$SUMMARY_FILE"
 echo "Total protein entries: $PROTEIN_TOTAL" >> "$SUMMARY_FILE"
+echo "-------------------------" >> "$SUMMARY_FILE"
+echo "Date: $DATE_NOW" >> "$SUMMARY_FILE"
 
 echo "[DONE] Summary written to $SUMMARY_FILE"
 
-
-# 7. End
-echo "Analysis complete!"
+echo
+echo "===== Analysis complete! ====="
 

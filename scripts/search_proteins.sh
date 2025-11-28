@@ -4,7 +4,7 @@
 echo -n "Protein: "
 read Protein
 
-#searching for kinase
+#searching for kinase (case-insensitive)
 grep -i "$Protein" Data/humchrx.txt
 
 

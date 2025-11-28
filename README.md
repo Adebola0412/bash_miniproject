@@ -5,7 +5,7 @@
 **Student ID**: [MB300-0003/2025]
 **Course**: PUB 3127 - Computing for Biologists
 **Date Started**: [20/11/2025]
-**Date Completed**: [24/11/2025]
+**Date Completed**: [28/11/2025]
 
 ---
 
@@ -85,7 +85,7 @@ The `Data/` directory contains:
 
 #### Script 3: Filter by Length
 ```bash
-./scripts/filter_by_length.sh 5000
+./scripts/filter_by_length.sh
 ```
 **Purpose**: Filters scaffolds with length >= specified minimum
 **Output**: `results/filtered_sequences.txt` - Filtered scaffold headers
@@ -106,7 +106,7 @@ The `Data/` directory contains:
 
 #### Script 6: Search Proteins
 ```bash
-./scripts/search_proteins.sh "kinase"
+./scripts/search_proteins.sh
 ```
 **Purpose**: Searches for proteins matching a keyword
 **Output**: `results/protein_search_results.txt` - Matching protein entries
@@ -115,7 +115,7 @@ The `Data/` directory contains:
 
 ### Running the Master Script
 ```bash
-./scripts/run_analysis.sh ./Data/
+./scripts/run_analysis.sh Data/
 ```
 **Purpose**: Runs all analyses in sequence and generates a comprehensive summary
 **Output**:
@@ -134,7 +134,7 @@ The `Data/` directory contains:
 - **Total number of sequences**: [35079]
 - **Longest sequence**: [NODE_1 with length 21257 bases and coverage 6.323607]
 - **Number of sequences with length >= 5000**: [283]
-- **Number of high-quality scaffolds** (length >= 10000, coverage >= 5.0): [31]
+- **Number of high-quality scaffolds** (length >= 10000, coverage >= 5.0): [33]
 
 ### Protein Database Analysis
 - **Total protein entries**: [850]
@@ -142,7 +142,7 @@ The `Data/` directory contains:
 - **Example protein search result** (e.g., for "kinase"): [38]
 
 ### Key Findings
-[TODO: Write 2-3 sentences about interesting observations from your analysis]
+[I was able to analyze the data sequence to ascertain the length of the sequence, identify the unique genes and other informations about the sequence which are useful in bioinformatics analysis]
 
 ---
 
@@ -153,31 +153,31 @@ The `Data/` directory contains:
 | Script Name | Purpose | Key Commands Used |
 |-------------|---------|-------------------|
 | `extract_headers.sh` | Extract NODE identifiers from FASTA file | grep, cut |
-| `longest_sequence.sh` | Find the scaffold with the longest sequence | grep, sort, head |
-| `filter_by_length.sh` | Filter scaffolds by minimum length | grep, cut, [loops] |
-| `high_quality_scaffolds.sh` | Identify high-quality scaffolds | grep, cut, [conditionals] |
+| `longest_sequence.sh` | Find the scaffold with the longest sequence | grep, sort, tail, cut |
+| `filter_by_length.sh` | Filter scaffolds by minimum length | grep, cut, wc, [loops] |
+| `high_quality_scaffolds.sh` | Identify high-quality scaffolds | grep, cut, wc, [conditionals] |
 | `extract_genes.sh` | Extract unique gene names from protein file | cut, sort, uniq |
-| `search_proteins.sh` | Search for proteins by keyword | grep |
-| `run_analysis.sh` | Master script that runs all analyses | [calls all other scripts] |
+| `search_proteins.sh` | Search for proteins by keyword | grep, cut |
+| `run_analysis.sh` | Master script that runs all analyses | grep, wc, [calls all other scripts] |
 
 ---
 
 ## Challenges and Solutions
 
 [TODO: Document any challenges you faced and how you solved them. This shows your problem-solving process. Example:]
-# I have issue on how to use command line argument, I solve it using echo and read
+
 
 **Challenge 1**: [I have issue on how to use command line argument]
-**Solution**: [I solved it by echo and read]
+**Solution**: [I solved it by using echo and read]
 
 **Challenge 2**: [I have issue on how to run_analysis]
-**Solution**: [I solved my seeking internet]
+**Solution**: [I solved it by seeking internet and understand that i have to do it step by step]
 
 ---
 
 ## What I Learned
 
-[ I learned how to used command line argument and I have better understanding on how to use grep cut pipeline to analyse large data ]
+[ I learned how to used command line argument and I have better understanding on how to use grep, cut, pipeline,sort e.t.c to analyse large data ]
 - New bash commands or concepts you learned
 - How command-line tools can be useful for bioinformatics
 - Any insights about version control with Git
